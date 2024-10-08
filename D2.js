@@ -6,9 +6,9 @@
 const num1 = 590;
 const num2 = 9098;
 if (num1 > num2) {
-  console.log("num1 è maggiore");
+  console.log("Es.1", "num1 è maggiore");
 } else if (num1 < num2) {
-  console.log("num2 è maggiore");
+  console.log("Es.1", "num2 è maggiore");
 }
 
 /* ESERCIZIO 2
@@ -16,12 +16,12 @@ if (num1 > num2) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-console.log("num1 = 5:", num1 === 5); /* false */
+//console.log("num1 = 5:", num1 === 5); /* false */
 //oppure
 if (num1 !== 5) {
-  console.log("num1 = 5? ", "not equal");
+  console.log("Es.2", "num1 = 5? ", "not equal");
 } else {
-  console.log("num1 = 5? ", "equal");
+  console.log("Es.2", "num1 = 5? ", "equal");
 }
 
 /* ESERCIZIO 3
@@ -30,7 +30,7 @@ if (num1 !== 5) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const divBy5 = num1 % 5;
-console.log("num1 è divisibile per 5?", divBy5 === 0); /* true */
+console.log("Es.3", "num1 è divisibile per 5?", divBy5 === 0); /* true */
 
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
@@ -41,10 +41,12 @@ const num3 = 8;
 const num4 = 24;
 if (num3 === 8 || num3 + num4 === 8 || num3 - num4 === 8) {
   console.log(
+    "Es.4",
     "O uno dei valori dei due numeri o il risultato della loro somma/sottrazione è uguale a 8"
   );
 } else {
-  ("Nessuno dei valori è = 8, nessun risultato della loro somma/sottrazione è = 8");
+  "Es.4",
+    "Nessuno dei valori è = 8, nessun risultato della loro somma/sottrazione è = 8";
 }
 
 /* ESERCIZIO 5
@@ -57,11 +59,13 @@ if (num3 === 8 || num3 + num4 === 8 || num3 - num4 === 8) {
 const totalShoppingCart = 49;
 if (totalShoppingCart >= 50) {
   console.log(
+    "Es.5",
     "Hai diritto alla spedizione gratuita! Il tuo totale è di: ",
     totalShoppingCart
   );
 } else {
   console.log(
+    "Es.5",
     "Il costo di spedizione al tuo indirizzo è di 10 euro. Il tuo totale è di: ",
     totalShoppingCart + 10 + " euro"
   );
@@ -74,17 +78,19 @@ if (totalShoppingCart >= 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const sconto = (totalShoppingCart * 20) / 100;
-console.log("sconto: ", sconto);
+//console.log("sconto: ", sconto);
 const newTotal20 = totalShoppingCart - sconto;
-console.log("Totale scontato:", newTotal20 + " euro");
+//console.log("Totale scontato:", newTotal20 + " euro");
 
 if (newTotal20 >= 50) {
   console.log(
+    "Es.6",
     "Hai diritto alla spedizione gratuita! Il tuo totale è di: ",
     newTotal20
   );
 } else {
   console.log(
+    "Es.6",
     "Il costo di spedizione al tuo indirizzo è di 10 euro. Il tuo totale è di: ",
     newTotal20 + 10 + " euro"
   );
@@ -129,6 +135,7 @@ if (num1 > num2 && num1 > num3) {
   }
 }
 console.log(
+  "Es.7",
   "Numeri in ordine decrescente: ",
   max,
   mid,
@@ -141,7 +148,11 @@ console.log(
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-console.log("num1 è un numero?", !isNaN(num1)); /* Risposta console: true */
+console.log(
+  "Es.8",
+  "num1 è un numero?",
+  !isNaN(num1)
+); /* Risposta console: true */
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
@@ -149,9 +160,9 @@ console.log("num1 è un numero?", !isNaN(num1)); /* Risposta console: true */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 if (num1 % 2 === 0) {
-  console.log(num1 + " " + "è un numero pari!");
+  console.log("Es.9", num1 + " " + "è un numero pari!");
 } else {
-  console.log(num1 + " " + "è un numero dispari!");
+  console.log("Es.9", num1 + " " + "è un numero dispari!");
 }
 
 /* ESERCIZIO 10
@@ -167,13 +178,13 @@ if (num1 % 2 === 0) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const val = 7;
-if (val < 10) {
-  console.log("Meno di 10");
-} else if (val < 5) {
-  console.log("Meno di 5");
+const val = 3;
+if (val < 5) {
+  console.log("Es.10", "Meno di 5");
+} else if (val < 10) {
+  console.log("Es.10", "Meno di 10");
 } else {
-  console.log("Uguale a 10 o maggiore");
+  console.log("Es.10", "Uguale a 10 o maggiore");
 }
 
 /* ESERCIZIO 11
@@ -188,28 +199,29 @@ const me = {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 //me.push({ city: "Toronto" }); non è un array
-//me.city = "Toronto"; funziona ma non so perchè
-const newMe = structuredClone(me);
+me.city = "Toronto";
+console.log("Es.11", me);
+/*const newMe = structuredClone(me);
 
 newMe.city = "Toronto";
 console.log("Es.11", newMe);
-//?? come faccio a metterlo in fondo?
+//?? come faccio a metterlo in fondo? */
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-delete newMe.lastName;
-console.log("Es.12", newMe);
+delete me.lastName;
+console.log("Es.12", me);
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-newMe.skills.pop();
-console.log("Es.13", newMe);
+me.skills.pop();
+console.log("Es.13", me);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
@@ -217,7 +229,7 @@ console.log("Es.13", newMe);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const array = [];
-array.push("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+array.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 console.log("Es.14", array);
 
 /* ESERCIZIO 15
@@ -225,5 +237,5 @@ console.log("Es.14", array);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-array.splice(9, 1, "100");
+array.splice(9, 1, 100);
 console.log("Es.15", array);
